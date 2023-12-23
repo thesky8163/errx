@@ -39,7 +39,13 @@ func Outlog(err error) bool {
 	}
 	return false
 }
-
+func Exception(err error) bool {
+	if err != nil {
+		fmt.Printf("%s\n", errinfo_time())
+		return true
+	}
+	return false
+}
 // func Printlog(err error, add func()) {
 // 	if err != nil {
 // 		fmt.Printf("%s", errinfo())
